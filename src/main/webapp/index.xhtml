@@ -1,0 +1,48 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+</h:head>
+
+<h:body>
+    <div class="card">
+         <p:splitter style="height: 300px">
+            <p:splitterPanel styleClass="flex align-items-center justify-content-center" size="20" minSize="10">
+                Menu Principal
+            </p:splitterPanel>
+            <p:splitterPanel size="80">
+                <p:splitter layout="vertical">
+                    <p:splitterPanel styleClass="flex align-items-center justify-content-center" size="15">
+                        <div style="width: 100%; text-align: center">
+                            <h1>BANCO DE DESARROLLO DE EL SALVADOR</h1>
+                        </div>
+                    </p:splitterPanel>
+                    <p:splitterPanel size="85">
+                        <p:splitter>
+                            <p:splitterPanel styleClass="flex align-items-center justify-content-center" size="20">
+
+                                <h:form>
+                                    <div class="card">
+                                        <p:dataTable var="readers" value="#{readersView.readersItems}">
+                                            <p:column headerText="Id">
+                                                <h:outputText value="#{readers.id}" />
+                                            </p:column>
+
+                                            <p:column headerText="Name">
+                                                <h:outputText value="#{readers.name}" />
+                                            </p:column>
+                                        </p:dataTable>
+                                    </div>
+                                </h:form>
+
+                            </p:splitterPanel>
+                        </p:splitter>
+                    </p:splitterPanel>
+                </p:splitter>
+            </p:splitterPanel>
+        </p:splitter>
+    </div>
+</h:body>
+</html>
